@@ -1,7 +1,7 @@
 # ZeroTrust PR
 
 <div align="center">
-  <img src="public/hero.png" alt="ZeroTrust PR Dashboard Overview" width="100%" />
+  <img src="dashboard/public/hero.png"  width="100%" />
 </div>
 
 **Autonomous Security Auditing Dashboard for GitHub Pull Requests**
@@ -46,13 +46,14 @@ Clone the repository and install dependencies:
 git clone [https://github.com/YourUsername/zerotrust-pr.git](https://github.com/YourUsername/zerotrust-pr.git)
 cd zerotrust-pr
 npm install
-3. Environment Configuration
+
+Environment Configuration
 Create a .env.local file in the root directory and securely add your API credentials:
 
 Code snippet
 GITHUB_TOKEN="your_github_personal_access_token"
 GOOGLE_GENERATIVE_AI_API_KEY="your_gemini_api_key"
-4. Initialization
+ Initialization
 Start the local development server:
 
 Bash
