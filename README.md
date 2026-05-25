@@ -1,5 +1,8 @@
-```markdown
 # ZeroTrust PR
+
+<div align="center">
+  <img src="public/hero.png" alt="ZeroTrust PR Dashboard Overview" width="100%" />
+</div>
 
 **Autonomous Security Auditing Dashboard for GitHub Pull Requests**
 
@@ -43,43 +46,29 @@ Clone the repository and install dependencies:
 git clone [https://github.com/YourUsername/zerotrust-pr.git](https://github.com/YourUsername/zerotrust-pr.git)
 cd zerotrust-pr
 npm install
+3. Environment Configuration
+Create a .env.local file in the root directory and securely add your API credentials:
 
-```
-
-### 3. Environment Configuration
-
-Create a `.env.local` file in the root directory and securely add your API credentials:
-
-```env
+Code snippet
 GITHUB_TOKEN="your_github_personal_access_token"
 GOOGLE_GENERATIVE_AI_API_KEY="your_gemini_api_key"
-
-```
-
-### 4. Initialization
-
+4. Initialization
 Start the local development server:
 
-```bash
+Bash
 npm run dev
+Navigate to http://localhost:3000. Input a valid GitHub Pull Request URL into the Analysis Console to execute a security audit.
 
-```
-
-Navigate to `http://localhost:3000`. Input a valid GitHub Pull Request URL into the Analysis Console to execute a security audit.
-
-## Engineering Roadmap (v2.0)
-
+Engineering Roadmap (v2.0)
 The current MVP establishes the core AI security validation engine. Planned architectural expansions include:
 
-* **Persistent Storage:** PostgreSQL database integration for historical audit logging, threat analytics, and MTTR tracking across repositories.
-* **Line-by-Line Diff Visualization:** Implementation of `react-diff-viewer` to render the raw GitHub diff in a split-pane view, mapping AI vulnerability alerts directly to specific Abstract Syntax Tree (AST) nodes or lines of code.
-* **Automated Pipeline Integration:** Transition from manual dashboard execution to an automated CI/CD pipeline listener via GitHub Webhooks.
-* **Multi-Model Redundancy:** Fallback routing logic to support secondary inference engines (e.g., Claude 3.5 Sonnet) during primary API rate limits or outages.
+Persistent Storage: PostgreSQL database integration for historical audit logging, threat analytics, and MTTR tracking across repositories.
 
-## License
+Line-by-Line Diff Visualization: Implementation of react-diff-viewer to render the raw GitHub diff in a split-pane view, mapping AI vulnerability alerts directly to specific Abstract Syntax Tree (AST) nodes or lines of code.
 
-This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+Automated Pipeline Integration: Transition from manual dashboard execution to an automated CI/CD pipeline listener via GitHub Webhooks.
 
-```
+Multi-Model Redundancy: Fallback routing logic to support secondary inference engines (e.g., Claude 3.5 Sonnet) during primary API rate limits or outages.
 
-```
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
